@@ -1,15 +1,24 @@
 body {
   font-family: "Muli", sans-serif;
   font-weight: 300;
-  background-color: #e2e8f0;
+  min-height: 100vw;
+  background-image: linear-gradient(
+    to bottom,
+    #071e3b,
+    #0d2748,
+    #143156,
+    #1a3b64,
+    #204573
+  );
   padding: 40px;
 }
 
-label {
+label,
+.info-label {
   display: flex;
   flex-direction: column;
   letter-spacing: 0.05rem;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 400;
   color: #222;
 }
@@ -19,12 +28,12 @@ label {
   max-width: 1400px;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .container {
   flex-grow: 1;
-  margin: 0 20px;
+  margin: 20px 20px;
   background-color: #fff;
   border: 1px solid #cbd5e0;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -36,7 +45,7 @@ label {
   }
 
   .button {
-    margin-top: 10px;
+    margin-top: 30px;
   }
 }
 
@@ -50,18 +59,24 @@ input {
 }
 
 .button {
-  background-color: #319795;
-  border-radius: 0.125rem;
-  padding: 10px 20px;
+  background-color: rgb(34, 35, 46);
+  border-radius: 0.5rem;
+  padding: 20px 20px;
   color: white;
   display: inline-flex;
+  justify-content: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 400;
-  font-size: .9em;
+  font-weight: bold;
+  font-size: 0.9em;
   &:hover {
     cursor: pointer;
   }
+}
+
+.button:hover,
+.button:active {
+  background-color: rgb(49, 50, 61);
 }
 
 .wallet {
@@ -72,7 +87,7 @@ input {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
-    font-size: .9em;
+    font-size: 0.9em;
     display: inline-flex;
     margin-top: 10px;
     padding: 0.75rem;
@@ -83,4 +98,40 @@ input {
 .transfer {
   display: flex;
   flex-direction: column;
+}
+
+.money {
+  background-color: hsl(39, 95%, 59%);
+  background-image: linear-gradient(
+    to left bottom,
+    #fab432,
+    #ff8f4a,
+    #ff6775,
+    #ff4cab,
+    #f056e3
+  );
+  border: 3px solid #f056e3de;
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.money:hover,
+.money:active {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.info {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 0.8em;
+  display: inline-flex;
+  margin-top: -10px;
+  padding: 0.4rem;
+  background-color: #f4f6f8;
 }
